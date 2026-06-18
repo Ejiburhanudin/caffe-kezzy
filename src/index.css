@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;750;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Highly detailed print mode styles */
+@media print {
+  /* Hide every element on the screen */
+  body * {
+    visibility: hidden;
+  }
+  
+  /* Make only the thermal receipt container and its children visible */
+  #thermal-receipt, #thermal-receipt * {
+    visibility: visible;
+  }
+  
+  /* Force system print layouts to remove margins, padding, headers, footers and backgrounds */
+  @page {
+    margin: 0;
+    size: auto;
+  }
+  
+  /* Align and center the thermal bill on raw white paper with clear font colors */
+  #thermal-receipt {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 68mm !important;
+    max-width: 68mm !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: white !important;
+    padding: 10px !important;
+    margin: 0 !important;
+    color: black !important;
+  }
+
+  /* Force browsers on webkit engines to render custom backgrounds inside print media */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Hide the serrated edge styling and layout details */
+  .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Coffee Shop POS & Order Management System",
+  "description": "Sistem Manajemen Pesanan, POS Kasir, Kitchen Display (KDS), Inventaris, Supplier, Membership, dan Self-Ordering QR Code untuk Coffee Shop & Cafe.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
